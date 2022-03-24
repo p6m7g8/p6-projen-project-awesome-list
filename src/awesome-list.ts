@@ -1,10 +1,9 @@
-import { JsiiProjectOptions, JsiiProject, SampleFile } from 'projen';
-
+import { SampleFile } from "projen";
+import { JsiiProjectOptions, JsiiProject } from "projen/lib/cdk";
 /**
  * Configurable knobs for Awesome Lists
  */
 export interface AwesomeListProjectOptions extends JsiiProjectOptions {
-
   /**
    * What e-mail address to list for the Code of Conduct Point of Contact
    *
@@ -23,42 +22,44 @@ export class AwesomeList extends JsiiProject {
     super({
       ...options,
       readme: {
-        filename: 'readme.md',
+        filename: "readme.md",
         contents: readmeContents(),
       },
-      defaultReleaseBranch: 'main',
-      releaseBranches: ['main'],
+      defaultReleaseBranch: "main",
       gitpod: true,
       releaseToNpm: false,
     });
 
-    new SampleFile(this, 'code-of-conduct.md', {
-      contents: this.codeOfConduct().replace('CONTACTEMAIL', options.contactEmail ?? 'noreply@example.com'),
+    new SampleFile(this, "code-of-conduct.md", {
+      contents: this.codeOfConduct().replace(
+        "CONTACTEMAIL",
+        options.contactEmail ?? "noreply@example.com"
+      ),
     });
 
-    new SampleFile(this, 'contributing.md', {
+    new SampleFile(this, "contributing.md", {
       contents: this.contributing(),
     });
 
     this._awesomeLint();
 
     this.gitpod?.addCustomTask({
-      name: 'Setup',
-      command: 'npx projen Setup',
+      name: "Setup",
+      command: "npx projen Setup",
     });
   }
 
   private _awesomeLint() {
-    this.addDevDeps('awesome-lint');
+    this.addDevDeps("awesome-lint");
 
-    const awesomeLintTask = this.addTask('awesome-lint');
-    awesomeLintTask.exec('npx awesome-lint');
+    const awesomeLintTask = this.addTask("awesome-lint");
+    awesomeLintTask.exec("npx awesome-lint");
 
-    this.buildTask.reset(awesomeLintTask.toShellCommand());
+    this.buildTask.reset(awesomeLintTask.toString());
   }
 
   private codeOfConduct(): string {
-    const contents = `# Contributor Covenant Code of Conduct
+    return `# Contributor Covenant Code of Conduct
 
 ## Our Pledge
 
@@ -133,12 +134,10 @@ available at [http://contributor-covenant.org/version/1/4][version]
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
     `;
-
-    return contents;
   }
 
   private contributing(): string {
-    const contents = `# Contribution Guidelines
+    return `# Contribution Guidelines
 
 Please note that this project is released with a
 [Contributor Code of Conduct](code-of-conduct.md). By participating in this
@@ -157,13 +156,11 @@ the existing one. If you're not sure how to do that,
 [here is a guide](https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md)
 on the different ways you can update your PR so that we can merge it.
     `;
-
-    return contents;
   }
 }
 
 function readmeContents(): string {
-  const contents = `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+  return `# Awesome Projen [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
   > Curated list of awesome [PROJECT](REPOSITORY) SHORTDESC.
 
@@ -174,6 +171,4 @@ function readmeContents(): string {
   ## Contributing
 
   Contributions welcome! Read the [contribution guidelines](contributing.md) first.`;
-
-  return contents;
 }
