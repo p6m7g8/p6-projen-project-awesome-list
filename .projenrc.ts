@@ -22,9 +22,9 @@ const project = new JsiiProject({
   },
 
   bundledDeps: ["fs-extra"],
-  devDeps: ["@types/fs-extra@^8", "projen@^0.53.0"],
-  deps: ["fs-extra", "projen@^0.53.0"],
-  peerDeps: ["projen@^0.53.0"],
+  devDeps: ["@types/fs-extra@^8", "projen@^0.53.9"],
+  deps: ["fs-extra", "projen@^0.53.9"],
+  peerDeps: ["projen@^0.53.9"],
 
   publishToPypi: {
     distName: "p6-projen-project-awesome-list",
