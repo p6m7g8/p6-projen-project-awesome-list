@@ -43,7 +43,7 @@ const project = new JsiiProject({
   // },
 
   publishToGo: {
-    moduleName: "github.com/p6m7g8/p6-projen-project-awesome-lists",
+    moduleName: "github.com/p6m7g8/p6-projen-project-awesome-list", // why doesn't this default to repositoryUrl?
   },
 });
 
