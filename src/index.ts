@@ -1,1 +1,1 @@
-export * from './awesome-list';
+export * from "./awesome-list";
