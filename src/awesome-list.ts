@@ -42,11 +42,6 @@ export class AwesomeList extends JsiiProject {
     });
 
     this._awesomeLint();
-
-    this.gitpod?.addCustomTask({
-      name: "Setup",
-      command: "npx projen Setup",
-    });
   }
 
   private _awesomeLint() {
@@ -55,7 +50,7 @@ export class AwesomeList extends JsiiProject {
     const awesomeLintTask = this.addTask("awesome-lint");
     awesomeLintTask.exec("npx awesome-lint");
 
-    this.buildTask.reset(awesomeLintTask.toString());
+    this.buildTask.spawn(awesomeLintTask);
   }
 
   private codeOfConduct(): string {
