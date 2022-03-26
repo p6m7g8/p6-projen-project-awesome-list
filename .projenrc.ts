@@ -40,9 +40,9 @@ const project = new cdk.JsiiProject({
   //   packageId: "P6m7g8.P6AwesomeList",
   // },
 
-  publishToGo: {
-    moduleName: "github.com/p6m7g8/p6-projen-project-awesome-list", // why doesn't this default to repositoryUrl?
-  },
+  // publishToGo: {
+  //   moduleName: "github.com/p6m7g8/p6-projen-project-awesome-list", // why doesn't this default to repositoryUrl?
+  // },
 });
 
 project.synth();
