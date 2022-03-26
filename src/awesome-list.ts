@@ -1,9 +1,8 @@
-import { SampleFile } from "projen";
-import { JsiiProjectOptions, JsiiProject } from "projen/lib/cdk";
+import { cdk, SampleFile } from "projen";
 /**
  * Configurable knobs for Awesome Lists
  */
-export interface AwesomeListProjectOptions extends JsiiProjectOptions {
+export interface AwesomeListProjectOptions extends cdk.JsiiProjectOptions {
   /**
    * What e-mail address to list for the Code of Conduct Point of Contact
    *
@@ -17,7 +16,7 @@ export interface AwesomeListProjectOptions extends JsiiProjectOptions {
  *
  * @pjid awesome-list
  */
-export class AwesomeList extends JsiiProject {
+export class AwesomeList extends cdk.JsiiProject {
   constructor(options: AwesomeListProjectOptions) {
     super({
       ...options,
