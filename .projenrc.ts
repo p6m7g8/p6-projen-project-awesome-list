@@ -8,6 +8,7 @@ const project = new cdk.JsiiProject({
   description: "Projen External Project for awesome-lists",
   stability: "experimental",
   keywords: ["awesome lists", "projen", "list", "awesome", "constructs"],
+  majorVersion: 1,
 
   defaultReleaseBranch: "main",
   projenrcTs: true,
