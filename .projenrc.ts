@@ -1,6 +1,6 @@
-import { JsiiProject } from "projen/lib/cdk";
+import { cdk } from "projen";
 
-const project = new JsiiProject({
+const project = new cdk.JsiiProject({
   name: "p6-projen-project-awesome-list",
   author: "Philip M. Gollucci",
   authorAddress: "pgollucci@p6m7g8.com",
@@ -21,10 +21,8 @@ const project = new JsiiProject({
     allowedUsernames: ["p6m7g8-automation"],
   },
 
-  bundledDeps: ["fs-extra"],
-  devDeps: ["@types/fs-extra@^8", "projen@^0.53.9"],
-  deps: ["fs-extra", "projen@^0.53.9"],
-  peerDeps: ["projen@^0.53.9"],
+  deps: ["projen"],
+  peerDeps: ["projen"],
 
   publishToPypi: {
     distName: "p6-projen-project-awesome-list",
