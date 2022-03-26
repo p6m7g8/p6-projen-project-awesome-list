@@ -12,7 +12,7 @@ import (
 	projen "github.com/projen/projen-go/projen/jsii"
 )
 
-//go:embed p6-projen-project-awesome-list-0.1.5.tgz
+//go:embed p6-projen-project-awesome-list-0.1.6.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
@@ -22,5 +22,5 @@ func Initialize() {
 	projen.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("p6-projen-project-awesome-list", "0.1.5", tarball)
+	_jsii_.Load("p6-projen-project-awesome-list", "0.1.6", tarball)
 }
