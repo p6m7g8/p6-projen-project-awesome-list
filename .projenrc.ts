@@ -21,8 +21,8 @@ const project = new cdk.JsiiProject({
     allowedUsernames: ["p6m7g8-automation"],
   },
 
-  deps: ["projen"],
-  peerDeps: ["projen"],
+  deps: ["projen@^0.53.9"],
+  peerDeps: ["projen@^0.53.9"],
 
   publishToPypi: {
     distName: "p6-projen-project-awesome-list",
