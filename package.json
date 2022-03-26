@@ -40,7 +40,6 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/fs-extra": "^8",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -70,12 +69,8 @@
     "projen": "^0.53.9"
   },
   "dependencies": {
-    "fs-extra": "^10.0.1",
     "projen": "^0.53.9"
   },
-  "bundledDependencies": [
-    "fs-extra"
-  ],
   "keywords": [
     "awesome",
     "awesome lists",

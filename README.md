@@ -11,7 +11,7 @@ Projen External Project to setup an Awesome List
 
 ## Summary
 
-Initializes a repo for use as an [awesome list](https://github.com/topics/awesome-list) Replaces `repoman`
+Initializes a repo for use as an [awesome list](https://github.com/topics/awesome-list) Replaces `yeoman`
 
 ## Usage
 
