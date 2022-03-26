@@ -48,8 +48,7 @@ export class AwesomeList extends cdk.JsiiProject {
 
     const awesomeLintTask = this.addTask("awesome-lint");
     awesomeLintTask.exec("npx awesome-lint");
-
-    this.buildTask.spawn(awesomeLintTask);
+    this.postCompileTask.spawn(awesomeLintTask);
   }
 
   private codeOfConduct(): string {
