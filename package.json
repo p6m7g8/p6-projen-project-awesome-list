@@ -58,7 +58,7 @@
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
-    "projen": "0.53.9",
+    "projen": "0.53.13",
     "standard-version": "^9",
     "ts-jest": "^27.1.4",
     "ts-node": "^9",
@@ -68,7 +68,7 @@
     "projen": "^0.53.9"
   },
   "dependencies": {
-    "projen": "^0.53.9"
+    "projen": "^0.53.13"
   },
   "keywords": [
     "awesome",
