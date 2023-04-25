@@ -4859,10 +4859,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.53.9:
-  version "0.53.9"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.53.9.tgz#44288d130824b3bf4257e7116769baa79847be76"
-  integrity sha512-uLnh7ZfBcAv8+eqp7FnFANNUH+Xr66RWq5a6m74b9N2eJhllm7ELGG+KTAhmnsijmf81lvqmFrC/e7tcAd3SpQ==
+projen@^0.55.0:
+  version "0.55.12"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.55.12.tgz#efeb9e382ba98c28c789965812c2f8a76c0a934e"
+  integrity sha512-+apkhqrchKS1VqwJENCfBzZGUshc2pb9vKFTfgE6w9CAd/W1Z1ELLLQEVDn3/wZWuJYtThxXGFFEP/j4J7wY9A==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -4871,10 +4871,10 @@ projen@^0.53.9:
     fs-extra "^9.1.0"
     glob "^7"
     ini "^2.0.0"
-    semver "^7.3.5"
+    semver "^7.3.7"
     shx "^0.3.4"
     xmlbuilder2 "^2.4.1"
-    yaml next
+    yaml "^2.0.1"
     yargs "^16.2.0"
 
 promise-inflight@^1.0.1:
@@ -6114,10 +6114,10 @@ yaml@^1.10.2:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yaml@next:
-  version "2.0.0-10"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.0.0-10.tgz#d5b59e2d14b8683313a534f2bbc648e211a2753e"
-  integrity sha512-FHV8s5ODFFQXX/enJEU2EkanNl1UDBUz8oa4k5Qo/sR+Iq7VmhCDkRMb0/mjJCNeAWQ31W8WV6PYStDE4d9EIw==
+yaml@^2.0.1:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.2.2.tgz#ec551ef37326e6d42872dad1970300f8eb83a073"
+  integrity sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==
 
 yargs-parser@20.x, yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   version "20.2.9"
